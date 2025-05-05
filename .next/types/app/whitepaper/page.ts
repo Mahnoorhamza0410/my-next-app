@@ -1,4 +1,4 @@
-// File: C:\Users\Tech Mehal\Desktop\rhinoo\my-next-app\app\whitepaper\page.tsx
+// File: C:\Users\Tech Mehal\Desktop\rhinoFiWin\RhinoFiWIN-main\RhinoFii-main\my-next-app\app\whitepaper\page.tsx
 import * as entry from '../../../../app/whitepaper/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

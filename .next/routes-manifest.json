@@ -34,12 +34,6 @@
       "namedRegex": "^/favicon\\.ico(?:/)?$"
     },
     {
-      "page": "/home",
-      "regex": "^/home(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/home(?:/)?$"
-    },
-    {
       "page": "/leaderboard",
       "regex": "^/leaderboard(?:/)?$",
       "routeKeys": {},

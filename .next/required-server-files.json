@@ -95,7 +95,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\Tech Mehal\\Desktop\\rhinoo\\my-next-app",
+    "outputFileTracingRoot": "C:\\Users\\Tech Mehal\\Desktop\\rhinoFiWin\\RhinoFiWIN-main\\RhinoFii-main\\my-next-app",
     "experimental": {
       "nodeMiddleware": false,
       "cacheLife": {
@@ -283,10 +283,10 @@
       ]
     },
     "turbopack": {
-      "root": "C:\\Users\\Tech Mehal\\Desktop\\rhinoo\\my-next-app"
+      "root": "C:\\Users\\Tech Mehal\\Desktop\\rhinoFiWin\\RhinoFiWIN-main\\RhinoFii-main\\my-next-app"
     }
   },
-  "appDir": "C:\\Users\\Tech Mehal\\Desktop\\rhinoo\\my-next-app",
+  "appDir": "C:\\Users\\Tech Mehal\\Desktop\\rhinoFiWin\\RhinoFiWIN-main\\RhinoFii-main\\my-next-app",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",
