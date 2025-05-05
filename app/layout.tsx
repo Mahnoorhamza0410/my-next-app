@@ -28,7 +28,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'My App',
+  title: 'RhinoFi',
   description: 'App with shared layout',
 };
 
