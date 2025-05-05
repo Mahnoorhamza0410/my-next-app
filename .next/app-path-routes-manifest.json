@@ -2,7 +2,7 @@
   "/_not-found/page": "/_not-found",
   "/favicon.ico/route": "/favicon.ico",
   "/leaderboard/page": "/leaderboard",
-  "/page": "/",
+  "/whitepaper/page": "/whitepaper",
   "/pool/page": "/pool",
-  "/whitepaper/page": "/whitepaper"
+  "/page": "/"
 }
