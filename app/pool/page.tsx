@@ -1,21 +1,4 @@
-// import UpperFooterImage from '@/components/UpperFooterImage';
-// import DynamicLayout from '@/components/DynamicLayout';
-// // import CountdownTimer from '@/components/CountdownTimer ';
-
-// const Pool = () => {
-//     return <div>
-//       <DynamicLayout title="Welcome to RhinoFi">
-//       <p className="text-lg">This is the homepage with a background and dynamic layout.</p>
-//     </DynamicLayout>
-//      < UpperFooterImage/>
-//      {/* <CountdownTimer /> */}
-//     </div>;
-
-//   };
-
-//   export default Pool;
-
-'use client';
+'user client';
 import React from 'react';
 import DynamicLayout from '@/components/DynamicLayout';
 import UpperFooterImage from '@/components/UpperFooterImage'
@@ -25,7 +8,7 @@ const Page = () => {
     <div className="w-full">
       {/* Banner section with background image */}
       <div
-        className="w-full bg-cover bg-center bg-no-repeat min-h-[700px] flex items-center justify-center px-4"
+        className="w-full bg-cover bg-center bg-no-repeat min-h-[700px] sm-dv-sc  flex items-center justify-center px-4"
         style={{ backgroundImage: "url('/hero-bg.jpg')" }}
       >
         {/* Insert Particles JUST inside Banner */}

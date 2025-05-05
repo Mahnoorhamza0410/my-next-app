@@ -1,6 +1,4 @@
-
-
-'use client';
+'user client';
 import BannerLayout from '@/components/BannerLayout';
 import CountdownTimer from '@/components/CountdownTimer'; // Make sure file name matches
 import CustomVideo from '@/components/CustomVideo';
