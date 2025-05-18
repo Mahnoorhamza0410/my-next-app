@@ -6,14 +6,16 @@ import 'swiper/css';
 import 'swiper/css/thumbs';
 import 'swiper/css/autoplay';
 const images = [
-  '/hero-bg.jpg',
   '/Rhino-big.png',
-  '/hero-bg.jpg',
+  '/rh2.png',
+  '/rh3.png',
+  '/rhn1.png',
+  '/rhn2.png',
+  '/rhn3.png',
+  '/rhn4.png',
+    '/rh2.png',
   '/Rhino-big.png',
-  '/hero-bg.jpg',
-  '/Rhino-big.png',
-  '/hero-bg.jpg',
-  '/Rhino-big.png',
+  '/rh3.png',
 ];
 function ThumbGallerySlider() {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);

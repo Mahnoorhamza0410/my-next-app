@@ -67,7 +67,7 @@ export default function TwoSectionLayout() {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row gap-6 p-0 sm:p-6 max-w-[1180px] mx-auto pb-[94px] sm:pb-[146px]">
+    <div className="flex flex-col md:flex-row gap-6 p-0 sm:p-6 max-w-[1180px] mx-auto pb-[94px] sm:pb-[146px] sm:pt-[120px] pt-[70px]">
       {/* Right Section (Content) */}
       <div className="w-full md:w-2/3 flex flex-col gap-1 sm:gap-6 order-1 md:order-2">
 
@@ -92,8 +92,8 @@ export default function TwoSectionLayout() {
         </div>
 
         {/* Quote section (hidden on mobile) */}
-        <div className="hidden sm:flex flex-row gap-4 items-center sm:items-start">
-          <img src="/BQ.png" className="w-10 h-10 sm:w-auto sm:h-auto" />
+        <div className="p-5 sm:p-0 flex flex-row gap-4 items-center sm:items-start">
+          <img src="/BQ.png" className="w-[35px] h-[25px] sm:w-auto sm:h-auto" />
           <p className="text-gray-300 text-left font-['Open_Sans']">
             ...RhinoFi has positioned itself for long term growth & stability.
           </p>
@@ -111,34 +111,35 @@ export default function TwoSectionLayout() {
             </div>
           ))}
         </div> */}
-      <div className="grid grid-cols-2 sm:gap-[10px] gap-[16px] sm:py-0 py-0 p-5 sm:p-0">
+<div className="grid sm:grid-cols-2 grid-cols-1 sm:gap-[10px] gap-[16px] sm:py-0 py-0 p-5 sm:p-0">
   {cards.map((card, idx) => (
     <div
       key={idx}
-      // Apply a different background color for the first card and the others
-      className={`${
-        idx === 0 ? 'bg-[#8F6CFA3D]' : 'bg-[#89898926]'
-      } transition-colors duration-300 text-white py-6 px-5 sm:pr-[71px] sm:pl-[71px] rounded-[10px] shadow flex flex-col items-center text-center leading-[24px]`}
+      className={`group transition-colors duration-300 text-white py-6 px-5 sm:pr-[71px] sm:pl-[71px] cards-rhino pr-[120px] pl-[120px] rounded-[10px] shadow flex flex-col items-center text-center leading-[24px]
+        ${idx === 0 ? 'bg-[#89898926] hover:bg-[#8F6CFA3D]'  : 'bg-[#89898926] hover:bg-[#8F6CFA3D]'}
+      `}
     >
-      {/* <Image src={card.icon} alt="icon" width={40} height={40} /> */}
       <img
-  src={card.icon}
-  alt="icon"
-  className={`w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] ${
-    card.icon === '/icons/Earn-fees.svg'
-      ? 'mt-[0px] sm:mt-[0px]'
-      : card.icon === '/icons/LA-AMP.svg'
-      ? 'mt-[2px]'
-      : ''
-  }`}
-/>
-      <h3 className="text-[14px] sm:text-[20px] font-semibold mt-4 mb-2">{card.title}</h3>
-      <p className="text-[12px] sm:text-[16px] text-white-300 capitalize">{card.desc}</p>
-
-      
+        src={card.icon}
+        alt="icon"
+        className={`w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] ${
+          card.icon === '/icons/Earn-fees.svg'
+            ? 'mt-[0px] sm:mt-[0px]'
+            : card.icon === '/icons/LA-AMP.svg'
+            ? 'mt-[2px]'
+            : ''
+        }`}
+      />
+      <h3 className="text-[14px] sm:text-[20px] font-semibold mt-4 mb-2">
+        {card.title}
+      </h3>
+      <p className="text-[12px] sm:text-[16px] text-white-300 capitalize">
+        {card.desc}
+      </p>
     </div>
   ))}
 </div>
+
 
 
 

@@ -1,60 +1,54 @@
-import React from 'react';
-
-const Lowervideosection = () => {
-  const address = '0xE7308da032326dE7A2a2b80E1131650E845Ab989';
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(address);
-      // No alert shown on success
-    } catch (err) {
-      console.error('Copy failed:', err);
-    }
-  };
-
+export default function RhinoFeesCard() {
   return (
-    <div className='flex flex-col items-center justify-center pt-[15px] sm:pt-[25px] pb-[85px] sm:pb-[130px] w-full px-4'>
-      {/* Paragraphs */}
-      <p className='text-[18px] text-center sm:text-[24px] text-[#DAD9D9] font-semibold leading-[150%] sm:leading-[170%] w-[400px] sm:w-[800px] sp-width'>
-        Crypto ipsum bitcoin ethereum dogecoin litecoin. Solana BitTorrent vechain dash nexo terraUSD. Monero ren kava WAX klaytn solana klaytn algorand. Solana stacks decentraland amp aave terra flow decred velas. Terra XRP ren enjin filecoin secret terra decred compound decentraland.
-      </p>
-
-      <p className='mt-[15px] sm:mt-[20px] font-poppins text-[16px] text-center text-[#DAD9D9] font-normal leading-[150%] sm:leading-[170%] w-[400px] sm:w-[800px] sp-width'>
-        Crypto ipsum bitcoin ethereum dogecoin litecoin. Solana BitTorrent vechain dash nexo terraUSD. Monero ren kava WAX klaytn solana klaytn algorand. Solana stacks decentraland amp aave terra flow decred compound decentraland.
-      </p>
-
-      {/* Search bar with buttons */}
-      <div className="mt-[40px] w-full flex justify-center">
-        <div className="w-full max-w-[600px] sm:max-w-[842px]">
-          <div className="flex items-center border-[2px] border-[#666666] rounded overflow-hidden w-full">
-            {/* Left Button */}
-            <button
-              className="bg-[#444] text-white text-[14px] sm:text-[18px] px-3 py-1 sm:px-4 sm:py-2"
-              onClick={() => {}}
-            >
-              $RHINO:
-            </button>
-
-            {/* Input with Black Background */}
-            <input
-  type="text"
-  value={address}
-  readOnly
-  className="w-[160px] ip-width flex-1 px-3 py-[6px] bg-black text-white placeholder-white placeholder:text-[14px] placeholder:font-medium outline-none text-sm"
-/>
-            {/* Right Button */}
-            <button
-              onClick={handleCopy}
-              className="bg-[#C336FF] text-white font-bold text-[14px] sm:text-[18px] px-3 py-1 sm:px-4 sm:py-2 cursor-pointer flex items-center gap-2"
-            >
-              <img src="/icons/copyicon.svg" alt="Copy Icon" className="w-4 h-4" />
-              Copy
-            </button>
+    <div className="sm:w-[738px] w-[335px] mx-auto rounded-lg shadow-lg border border-[#8F74E1] overflow-hidden">
+      {/* Header */}
+      <div className="flex h-[70px] bg-gradient-to-r from-[#4F6EFF] to-[#8F6CFA]">
+        {/* Left Section */}
+        <div className="w-[100%]  flex items-center gap-4 px-4">
+          <img src="/sidebar-logo.png" alt="Rhino Logo" className="w-[47.54px] h-[46px]" />
+          <div>
+            <h2 className="text-base font-semibold text-white uppercase">RHINO Statistics</h2>
           </div>
         </div>
+
+        {/* Right Section */}
+       
+      </div>
+
+      {/* Content */}
+      <div className="bg-[#1b1349] text-white ">
+        {/* p-6 space-y-6 removed */}
+        {/* Reward Allocations */}
+        <div>
+          <h3 className="text-xs font-bold uppercase mb-2 border-b border-white/20  bg-[black]  px-4 py-3">Reward Allocations</h3>
+          <div className="flex justify-between items-center text-sm mb-1  ">
+            <div className="px-4 py-3 w-[80%]">
+              PLS Rewards Distributed
+            </div>
+            <div className="px-4 py-3 w-[20%] border-l-[2px] border-l-[#494949]">1,254,215,251</div>
+          </div>
+          <div className="flex justify-between items-center  text-sm">
+            <div className="px-4 py-3 w-[80%]">
+              RHINO Bought & Burned            
+            </div>
+            <div className="px-4 py-3 w-[20%] border-l-[2px] border-l-[#494949]">251,654,544</div>
+          </div>
+          <div className="flex justify-between items-center  text-sm">
+            <div className="px-4 py-3 w-[80%]">
+              SolidX Bought & Burned           
+            </div>
+            <div className="px-4 py-3 w-[20%] border-l-[2px] border-l-[#494949]">2,514</div>
+          </div>
+          <div className="flex justify-between items-center  text-sm">
+            <div className="px-4 py-3 w-[80%]">
+              Gelato Bought & Burned          
+            </div>
+            <div className="px-4 py-3 w-[20%] border-l-[2px] border-l-[#494949]">175,564,488</div>
+          </div>
+        </div>
+
+     
       </div>
     </div>
   );
-};
-
-export default Lowervideosection;
+}

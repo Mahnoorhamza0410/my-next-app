@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import React from 'react';
 import DynamicLayout from '@/components/DynamicLayout';
 import UpperFooterImage from '@/components/UpperFooterImage'
+import SearchLeaderBoard from'@/components/SearchLeaderBoard'
 // import { Particles } from "@/components/magicui/particles";
 
 const Particles = dynamic(() => import("@/components/magicui/particles").then((mod) => mod.Particles), { ssr: false });
@@ -37,12 +38,13 @@ const Page = () => {
       </div>
       {/* Iframe Section */}
       <div className="w-full px-4 pt-[0px] flex justify-center mt-[-260px]">
-        <div className="w-full max-w-[655px] h-[800px] pb-[90px]">
-          <iframe
+        <div className="w-full max-w-[655px] pb-[90px]">
+          {/* <iframe
             src="http://bitselexion.com/"
             title="CoinMarketCap"
             className="w-full h-full rounded-md border-2 border-white"
-          ></iframe>
+          ></iframe> */}
+          <SearchLeaderBoard/>
         </div>
       </div>
       <UpperFooterImage/>

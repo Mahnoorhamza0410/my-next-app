@@ -1,59 +1,101 @@
 import React from 'react';
 
-const Lowervideosection = () => {
-  const address = '0xE7308da032326dE7A2a2b80E1131650E845Ab989';
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(address);
-      // No alert shown on success
-    } catch (err) {
-      console.error('Copy failed:', err);
-    }
-  };
-
+const VideoLowerSec = () => {
   return (
-    <div className='flex flex-col items-center justify-center pt-[15px] sm:pt-[25px] pb-[85px] sm:pb-[130px] w-full px-4'>
-      {/* Paragraphs */}
-      <p className='text-[18px] text-center sm:text-[24px] text-[#DAD9D9] font-semibold leading-[150%] sm:leading-[170%] w-[400px] sm:w-[800px] sp-width'>
-        Crypto ipsum bitcoin ethereum dogecoin litecoin. Solana BitTorrent vechain dash nexo terraUSD. Monero ren kava WAX klaytn solana klaytn algorand. Solana stacks decentraland amp aave terra flow decred velas. Terra XRP ren enjin filecoin secret terra decred compound decentraland.
-      </p>
-
-      <p className='mt-[15px] sm:mt-[20px] font-poppins text-[16px] text-center text-[#DAD9D9] font-normal leading-[150%] sm:leading-[170%] w-[400px] sm:w-[800px] sp-width'>
-        Crypto ipsum bitcoin ethereum dogecoin litecoin. Solana BitTorrent vechain dash nexo terraUSD. Monero ren kava WAX klaytn solana klaytn algorand. Solana stacks decentraland amp aave terra flow decred compound decentraland.
-      </p>
-
-      {/* Search bar with buttons */}
-      <div className="mt-[40px] w-full max-w-[842px]">
-        <div className="flex items-center border-[2px] border-[#666666] rounded overflow-hidden w-full">
-          {/* Left Button */}
-          <button
-            className="bg-[#444] text-white text-[14px] sm:text-[18px] px-3 py-1 sm:px-4 sm:py-2"
-            onClick={() => {}}
-          >
-            $RHINO:
-          </button>
-
-          {/* Input with Black Background */}
-          <input
-  type="text"
-  value={address}
-  readOnly
-  className="w-[160px] ip-width flex-1 px-3 py-[6px] bg-black text-white placeholder-white placeholder:text-[14px] placeholder:font-medium outline-none text-sm"
-/>
-
-          {/* Right Button */}
-          <button
-  onClick={handleCopy}
-  className="bg-[#C336FF] text-white font-bold text-[14px] sm:text-[18px] px-3 py-1 sm:px-4 sm:py-2 cursor-pointer flex items-center gap-2"
->
-  <img src="/icons/copyicon.svg" alt="Copy Icon" className="w-4 h-4" />
-  Copy
-</button>
-        </div>
+    <div
+      className="w-[900px] h-[700px] flex flex-col items-center justify-between rounded-[10px] mx-auto box-border"
+      style={{
+        background: 'linear-gradient(90deg, rgba(79, 110, 255, 0.20) 0%, rgba(136, 76, 200, 0.20) 100%)',
+        border: '1px solid #8F6CFA50', // Border color and weight
+      }}
+    >
+      <div className='border-b border-b-[#51437B] w-[838.82px]'>
+        <h2 className="text-[24px] font-['Kumbh_Sans'] sm:text-[30px] font-kumbh font-medium text-white text-center pb-[30px] leading-[48%]">🔋 RHINO Charging Cycle</h2>
+      <h2 className="text-[24px] font-['Kumbh_Sans'] sm:text-[30px] font-kumbh font-light text-white text-center pb-[30px] leading-[48%]">Earn → Buy RHINO → Burn 50% → Repeat</h2>
       </div>
+      <p className='text-[16px] font-bold leading-[27%] text-white mt-[20px]'>Initial Allocation: <span className='font-light'> 50% of the total supply (500 million RHINO) is sent to the Party Wallet.</span> </p>
+     <div>
+       {/* number 1 div */}
+      <div
+      className="flex items-center gap-4 p-4 rounded-[10px] w-[750px] h-[80px] mt-[25px]"
+      style={{
+        background: 'linear-gradient(90deg, rgba(47, 35, 82, 0.40) 0%, rgba(143, 108, 250, 0.40) 100%)',
+      }}
+    >
+      {/* Icon */}
+      <div className="w-[60px] h-[60px] flex items-center justify-center">
+        <img src="/icons/num1.svg" alt="Step Icon" className="w-full h-auto" />
+      </div>
+
+      {/* Heading and Text */}
+      <div className="flex flex-col justify-start">
+        <h3 className="text-white text-lg font-semibold">Step Title</h3>
+        <p className="text-white text-sm opacity-80">This is a short description below the heading.</p>
+      </div>
+    </div>
+     {/* number 2 div */}
+      <div
+      className="flex items-center gap-4 p-4 rounded-[10px] w-[750px] h-[80px] mt-[10px]"
+      style={{
+        background: 'linear-gradient(270deg, rgba(47, 35, 82, 0.40) 0%, rgba(143, 108, 250, 0.40) 100%)',
+      }}
+    >
+      {/* Icon */}
+      <div className="w-[60px] h-[60px] flex items-center justify-center">
+        <img src="/icons/num2.svg" alt="Step Icon" className="w-full h-auto" />
+      </div>
+
+      {/* Heading and Text */}
+      <div className="flex flex-col justify-start">
+        <h3 className="text-white text-lg font-semibold">Step Title</h3>
+        <p className="text-white text-sm opacity-80">This is a short description below the heading.</p>
+      </div>
+    </div>
+     {/* number 3 div */}
+      <div
+      className="flex items-center gap-4 p-4 rounded-[10px] w-[750px] h-[80px] mt-[10px]"
+      style={{
+        background: 'linear-gradient(90deg, rgba(47, 35, 82, 0.40) 0%, rgba(143, 108, 250, 0.40) 100%)',
+      }}
+    >
+      {/* Icon */}
+      <div className="w-[60px] h-[60px] flex items-center justify-center">
+        <img src="/icons/num3.svg" alt="Step Icon" className="w-full h-auto" />
+      </div>
+
+      {/* Heading and Text */}
+      <div className="flex flex-col justify-start">
+        <h3 className="text-white text-lg font-semibold">Step Title</h3>
+        <p className="text-white text-sm opacity-80">This is a short description below the heading.</p>
+      </div>
+    </div>
+     {/* number 4 div */}
+      <div
+      className="flex items-center gap-4 p-4 rounded-[10px] w-[750px] h-[80px] mt-[10px]"
+      style={{
+        background: 'linear-gradient(270deg, rgba(47, 35, 82, 0.40) 0%, rgba(143, 108, 250, 0.40) 100%)',
+      }}
+    >
+      {/* Icon */}
+      <div className="w-[60px] h-[60px] flex items-center justify-center">
+        <img src="/icons/num4.svg" alt="Step Icon" className="w-full h-auto" />
+      </div>
+
+      {/* Heading and Text */}
+      <div className="flex flex-col justify-start">
+        <h3 className="text-white text-lg font-semibold">Step Title</h3>
+        <p className="text-white text-sm opacity-80">This is a short description below the heading.</p>
+      </div>
+    </div>x
+     </div>
+    <div className='bg-[rgba(255,255,255,0.05)] w-[auto] px-10'>
+     <div className='w-[700px]'>
+       <h2>⚡ Why the RHINO Charging Cycle Matters</h2>
+      <p>Every cycle earns PULSE, buys RHINO from the market, and burns half of it — permanently removing tokens from supply. If rewards fall short, we burn extra from our own stash (up to 10%). Each round shrinks supply, boosts reward share for holders, and supports price — even in a bear market.</p>
+     </div>
+    </div>
     </div>
   );
 };
 
-export default Lowervideosection;
+export default VideoLowerSec;

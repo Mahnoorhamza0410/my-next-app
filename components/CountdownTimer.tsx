@@ -28,7 +28,8 @@ export default function CountdownTimer() {
   const timeLeft = { days, hours, minutes };
 
   return (
-    <div className="relative bg-no-repeat bg-cover bg-center w-full bg-[linear-gradient(90deg,rgba(47,35,82,0.2)_0%,rgba(143,108,250,0.2)_100%)] mx-auto px-4 py-9 shaded-padding sm:py-6 z-10 opacity-100 sm:opacity-40">
+    // sm:opacity-40 {removed opacity from the desktop from the below div}
+    <div className="relative bg-no-repeat bg-cover bg-center w-full bg-[linear-gradient(90deg,rgba(47,35,82,0.2)_0%,rgba(143,108,250,0.2)_100%)] mx-auto px-4 py-9 shaded-padding sm:py-6 z-10 opacity-100">
       {/* Gradient Behind */}
       <div
         className="absolute inset-0 z-0 "

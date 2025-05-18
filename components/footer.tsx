@@ -23,7 +23,13 @@ export default function Footer() {
           rel="noopener noreferrer"
           className="w-[50px] h-[50px] flex items-center justify-center rounded-full bg-gradient-to-br from-[#BD58C0] to-[#2CC8D8]"
         >
-          <FaFacebookF className="text-black text-xl" />
+           <Image
+          src="/icons/twitter-footer.svg"
+          alt="twitter"
+          width={200}
+          height={200}
+          className='w-[50px] h-[50px]'
+        />
         </a>
         <a
           href="https://twitter.com/yourprofile"
@@ -31,15 +37,13 @@ export default function Footer() {
           rel="noopener noreferrer"
           className="w-[50px] h-[50px] flex items-center justify-center rounded-full bg-gradient-to-br from-[#BD58C0] to-[#2CC8D8]"
         >
-          <FaTwitter className="text-black text-xl" />
-        </a>
-        <a
-          href="https://instagram.com/yourprofile"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-[50px] h-[50px] flex items-center justify-center rounded-full bg-gradient-to-br from-[#BD58C0] to-[#2CC8D8]"
-        >
-          <FaInstagram className="text-black text-xl" />
+           <Image
+          src="/Vector.png"
+          alt="Telegram-footer"
+          width={200}
+          height={200}
+          className='w-[50px] h-[50px]'
+        />
         </a>
       </div>
 

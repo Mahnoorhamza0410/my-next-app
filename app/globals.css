@@ -260,3 +260,132 @@ h5{
     background-position: center top;
   }
 } */
+
+
+.for-supply-tab-new{
+      display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 320px)  {
+.for-supply-tab-new {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    width: auto;
+    align-items: normal;
+}
+  
+}
+@media only screen and (max-width: 388px) and (min-width: 320px)  {
+.cards-rhino {
+padding-right: 60px;
+padding-left: 60px;
+}}
+
+@media only screen and (max-width: 400px) and (min-width: 389px)  {
+.cards-rhino {
+padding-right: 80px;
+padding-left: 80px;
+}}
+
+/* Hide scrollbar but allow scrolling */
+.custom-scrollbar-hide::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+.custom-scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+@media only screen and (max-width: 340px) and (min-width: 318px)  {
+.only-320p{
+  width: 290px;
+}}
+
+
+
+/* for the chargecycle bottom shaded padding css*/
+@media only screen and (max-width: 430px) and (min-width: 415px) {
+  .acc-p{
+    padding-left: 38px;
+
+  }
+}
+
+
+/* for the Supply Tabs and Inner bg and border width handling*/
+@media only screen and (max-width: 770px) and (min-width: 320px) {
+  .del-bg-border{
+    /* background-image:none; */
+    border: none;
+
+  }
+}
+@media only screen and (max-width: 770px) and (min-width: 756px) {
+  .handle-w-chargecycle{
+    width: auto;
+
+  }
+}
+@media only screen and (max-width: 600px) and (min-width: 320px) {
+.card-h-chargecycle{
+  height: auto;
+}
+.ico{
+  width: 40px;
+  height: 40px;
+}
+
+}
+
+
+.bg-tab-sm {
+background:linear-gradient(20deg, #4f6eff1f 40%, #8f6cfa30 100%);
+}
+
+
+/* for the tab version to hide the bg  becasue we are just using defalut bg in 768 sc sizes*/
+
+@media only screen and (max-width: 780px) and (min-width: 650px) {
+
+  .hidebgtab{
+    background-image: none;
+    width:740px;
+    padding-left: 0px;
+    padding-right: 0px;
+
+  }
+  .juxttab{
+    padding: 0px;
+  }
+}
+
+
+@media only screen and (max-width: 376px) and (min-width: 375px) {
+.justiphoneSE{
+  width: 290px;
+}
+}
+
+.forcopyicon{
+      width: 20px;
+    height: 20px;
+    margin-top: -5px;
+    margin-right: -5px;
+}
+@media only screen and (max-width: 550px) and (min-width: 320px){
+.forcopyicon{
+
+    margin-top: -4px;
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}}
+
+.bg-for-cell {
+background:linear-gradient(20deg, #4f6eff1f 40%, #8f6cfa30 100%);
+}

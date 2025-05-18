@@ -6,7 +6,9 @@ export default function TokenTabsWithIframe() {
 
   return (
     <div className="w-full flex flex-col items-center justify-center gap-6 px-4 py-10 bg-[url('/upper-home.png')] bg-lightgray bg-cover bg-no-repeat bg-blend-multiply pt-[60px] sm:pt-[75px] pb-[150px] sm:pb-[130px]">
-      
+       <h2 className="text-white font-['Kumbh_Sans'] text-[28px] sm:text-[44px] font-bold leading-[28px] sm:leading-[48px] text-center">
+        Buy RhinoFi (RHINO)
+      </h2>
       {/* Tabs */}
       <div className="w-[350px] flex gap-4 p-2 justify-center items-center rounded-full bg-[radial-gradient(70.71%_70.71%_at_50%_50%,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0)_100%)] shadow-[inset_1px_1px_10px_rgba(143,108,250,0.6),inset_0_0_0_1px_rgba(255,255,255,0.06)]">
         <button
