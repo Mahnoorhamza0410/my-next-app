@@ -29,8 +29,8 @@ const SupplyTab = () => {
   };
 
   return (
-    <div className="sm:w-[950px] w-[370px] for-supply-tab-new mt-10 bg-black text-white rounded-xl shadow-lg">
-      <h2 className="text-[24px] font-['Kumbh_Sans'] sm:text-[44px] font-kumbh font-bold text-white text-center pb-[30px]">
+    <div className="sm:w-[950px] w-[370px] for-supply-tab-new mt-10 bg-black text-white rounded-xl shadow-lg pt-[90px]">
+      <h2 className="text-[36px] leading-[48px] font-['Kumbh_Sans'] sm:text-[44px] font-kumbh font-bold text-white text-center pb-[30px]">
         RhinoFi Tokenomics
       </h2>
 
@@ -43,14 +43,14 @@ const SupplyTab = () => {
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={`flex-1 text-center sm:py-1 sm:px-3 px-3 py-2 h-[60px] bg-[#2B2B2B] cursor-pointer
-                  text-[14px] text-white font-bold leading-[100%] w-[195px]
+                  text-[18px] leading-[18px] text-white font-bold leading-[100%] w-[195px]
                   ${
                     activeTab === tab
                       ? 'border-t-4 border-[#AD1CEB] bg-[#21234D]'
                       : 'border-t-4 border-transparent'
                   }
-                  rounded-t-[10px] rounded-b-[0px] transition-all duration-200 flex items-center justify-center gap-2
-                  focus:outline-none focus:ring-0 active:outline-none active:ring-0`}
+                  rounded-t-[10px] rounded-b-[0px] transition-all duration-200 sm:mt-[none] mt-[22px] flex items-center justify-center gap-2
+                  focus:outline-none focus:ring-0 active:outline-none active:ring-0 padd-tab`}
               >
                 {tab}
               </button>
@@ -78,8 +78,8 @@ const SupplyTab = () => {
                     onClick={() =>
                       setOpenAccordion(isOpen ? null : index)
                     }
-                    className="w-full px-4 py-4 flex items-center justify-between text-white text-[14px] font-bold leading-[100%]
-                      focus:outline-none focus:ring-0 active:outline-none active:ring-0"
+                    className="w-full px-4 py-4 flex items-center justify-between text-white text-[16px] sm:text-[18px] font-bold leading-[100%]
+                      focus:outline-none focus:ring-0 active:outline-none active:ring-0 "
                   >
                     <span className="flex items-center gap-2">{tab}</span>
                     <img

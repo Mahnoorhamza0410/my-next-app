@@ -27,9 +27,9 @@ export default function SearchLeaderBoard() {
   );
 
   return (
-    <div className="relative flex flex-col items-center bg-[#8f6cfa25] rounded-[10px] border border-[#3C2A74] p-4 pb-16">
+    <div className="lb-shadedarea-mb lb-shadedarea-lg relative flex flex-col items-center bg-[#8f6cfa25] rounded-[10px] border border-[#3C2A74] sm:pt-[30px] pt-[30px] p-4 pb-16">
       {/* Search Bar */}
-      <div className="relative w-full max-w-[485px] h-[50px] mb-6 px-4 md:px-0">
+      <div className="relative w-full max-w-[485px] h-[50px] sm:mb-6 mb-0 px-4 pr-[15px] pl-[15px] md:px-0">
         <input
           type="text"
           placeholder="Search wallet address"
@@ -40,14 +40,14 @@ export default function SearchLeaderBoard() {
         <img
           src="/icons/SearchIcon.svg"
           alt="Search Icon"
-          className="absolute top-1/2 sm:right-[8px] right-[25px] transform -translate-y-1/2 w-[30px] h-[30px] sm:w-[40px] sm:h-[40px]"
+          className="absolute top-1/2 sm:right-[8px] right-[25px] transform -translate-y-1/2 w-[39px] h-[39px] sm:w-[40px] sm:h-[40px]"
         />
       </div>
 
       {/* Table */}
-      <div className="w-full max-w-5xl rounded-[12px] overflow-hidden shadow-lg border-x border-[#2A1F49]">
+      <div className="w-full max-w-5xl rounded-[12px] overflow-hidden shadow-lg border-x border-[#2A1F49] sm:pt-[0px] pt-[40px]">
         <table className="min-w-full text-sm text-left text-gray-700">
-          <thead className="bg-white/15 text-xs uppercase text-white">
+          <thead className="bg-white/15 text-xs uppercase text-white text-[16px] leading-[21px]">
             <tr>
               <th colSpan={2} className="px-6 py-3 border-b border-[#2A1F49]">Wallet</th>
               <th className="px-6 py-3 border-b border-[#2A1F49]">RHINO</th>
@@ -57,12 +57,12 @@ export default function SearchLeaderBoard() {
             {filteredWallets.map((item, index) => (
               <tr key={index} className="border-b border-[#2A1F49]">
                 <td colSpan={2} className="px-6 py-4 text-white font-light max-w-[300px]">
-                  <div className="flex items-center gap-2 text-white font-light sm:flex-wrap flex-nowrap">
+                  <div className="flex items-center gap-2 text-white font-normal text-[16px] leading-[24px] sm:flex-wrap flex-nowrap">
                     <span className="w-[20px] text-center shrink-0">1</span>
                     <span className="break-all">{item.wallet}</span>
                   </div>
                 </td>
-                <td className="px-6 py-4 text-white font-light">
+                <td className="px-6 py-4 text-white font-semibold text-[16px] leading-[24px]">
                   {item.rhino.toLocaleString()}
                 </td>
               </tr>
@@ -80,29 +80,32 @@ export default function SearchLeaderBoard() {
 
       {/* Static Pagination Buttons */}
       <div className="absolute bottom-[30px] w-full flex justify-center md:justify-end px-4 md:px-6">
-        <div className="flex gap-1 text-sm items-center">
-          <button className="px-3 py-1 rounded bg-transparent text-[#53545C] cursor-pointer">
-            &lt;
-          </button>
-          <button className="px-3 py-1 rounded bg-[#7A61FC] text-white cursor-pointer">
-            1
-          </button>
-          {[2, 3, 4, 5].map((page) => (
-            <button
-              key={page}
-              className="px-3 py-1 rounded bg-transparent text-[#53545C] cursor-pointer"
-            >
-              {page}
-            </button>
-          ))}
-          <button
-            className="px-3 py-1 rounded bg-[#7A61FC] cursor-pointer"
-            style={{ color: '#FFFFFF99' }}
-          >
-            &gt;
-          </button>
-        </div>
-      </div>
+  <div className="flex gap-1 text-sm items-center">
+    <button
+      className="px-3 py-1 rounded bg-transparent text-[#53545C] cursor-pointer hover:bg-[#7A61FC] hover:text-white transition"
+    >
+      &lt;
+    </button>
+    <button className="px-3 py-1 rounded bg-[#7A61FC] text-white cursor-default">
+      1
+    </button>
+    {[2, 3, 4, 5].map((page) => (
+      <button
+        key={page}
+        className="px-3 py-1 rounded bg-transparent text-[#53545C] cursor-pointer hover:bg-[#7A61FC] hover:text-white transition"
+      >
+        {page}
+      </button>
+    ))}
+    <button
+      className="px-3 py-1 rounded bg-[#7A61FC] cursor-pointer hover:text-white transition"
+      style={{ color: '#FFFFFF99' }}
+    >
+      &gt;
+    </button>
+  </div>
+</div>
+
     </div>
   );
 }

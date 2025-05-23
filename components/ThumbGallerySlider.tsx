@@ -40,13 +40,13 @@ function ThumbGallerySlider() {
             <img
               src={img}
               alt={`Slide ${i}`}
-              className="w-full h-full object-contain sm:object-cover"
+              className="w-full sm:h-[755px] h-[347px]  object-contain sm:object-cover"
             />
           </SwiperSlide>
         ))}
       </Swiper>
       {/* Thumbnails with Overlay */}
-      <div className="absolute bottom-0 left-0 w-full z-10 bg-black/50 py-4">
+      <div className="absolute bottom-0 left-0 w-full z-10 bg-black/50 py-4 sm:h-[193px] h-[auto] flex items-center justify-end">
         <div className="w-full  px-4 overflow-hidden">
         <Swiper
   onSwiper={setThumbsSwiper}

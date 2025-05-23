@@ -37,12 +37,13 @@ export default function Header() {
         <header className="fixed top-0 left-0 w-full z-40 bg-gray-200/10 text-white h-[65px] sm:h-[100px] flex items-center justify-between px-6">
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center justify-center w-full gap-10 relative">
-            <Link href="/" className="text-[16px] px-4 font-normal">
+            <Link href="#" className="text-[16px] px-4 font-bold">
               BUY RHINO
             </Link>
 
             {/* Logo + Copy Icon */}
             <div className="relative px-4 cursor-pointer select-none" onClick={(e) => e.preventDefault()}>
+              <Link href='/' passHref> 
               <Image
                 src="/Rhino-logo.png"
                 alt="Rhino-logo"
@@ -50,6 +51,7 @@ export default function Header() {
                 height={55}
                 className="object-contain w-auto h-[40px] sm:h-[55px]"
               />
+              </Link>
               <Image
                 src="/icons/copy.svg"
                 alt="Copy"
@@ -61,9 +63,10 @@ export default function Header() {
                   copyAddress();
                 }}
               />
+              
             </div>
 
-            <Link href="/pool" className="text-[16px] px-4 font-normal">
+            <Link href="/pool" className="text-[16px] px-4 font-bold">
               LIQUIDITY POOLS
             </Link>
 
@@ -72,26 +75,28 @@ export default function Header() {
               className="absolute right-[200px] z-50"
               aria-label="Toggle Menu"
             >
-              <Image src="/icons/menu-icon.svg" alt="Menu Icon" width={28} height={28} />
+              <Image src="/icons/menu-icon.svg" alt="Menu Icon" width={36} height={24} />
             </button>
           </div>
 
           {/* Mobile Logo + Copy Icon */}
           <div className="flex justify-center items-center w-full lg:hidden px-4">
             <div className="relative cursor-pointer select-none" onClick={(e) => e.preventDefault()}>
+              <Link href='/' passHref> 
               <Image
                 src="/Rhino-logo.png"
                 alt="Logo"
                 width={160}
                 height={50}
-                className="object-contain h-[35px] sm:h-[50px]"
+                className="object-contain h-[35px] sm:h-[50px] h-[45px]"
               />
+              </Link>
               <Image
                 src="/icons/copy.svg"
                 alt="Copy"
                 width={20}
                 height={24}
-                className="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer"
+                className="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer copy-786sc copy-mb"
                 onClick={(e) => {
                   e.preventDefault();
                   copyAddress();
@@ -113,9 +118,9 @@ export default function Header() {
 
       {/* Sidebar */}
       {menuOpen && (
-        <div className="fixed top-[10px] bottom-[10px] right-[10px] w-[315px] z-50">
+        <div className="fixed top-[10px] bottom-[10px] right-[10px] sm:w-[400px] w-[360px] z-50">
           <div
-            className="w-full h-full bg-cover bg-center text-white rounded-[10px] shadow-lg"
+            className="w-full h-full bg-cover  text-white rounded-[10px] shadow-lg"
             style={{ backgroundImage: 'url("/menu-bg-image.png")' }}
           >
             <div className="h-full overflow-y-auto custom-scrollbar-hide rounded-[10px]">
@@ -133,34 +138,37 @@ export default function Header() {
 
                 {/* Menu Items */}
                 {[
-                  { href: '/', label: 'Home', id: 'home' },
-                  { href: '#', label: 'Buy (RHINO) Token', id: 'buy' },
-                  { href: '/pool', label: 'Liquidity Pool', id: 'pool' },
-                  { href: '/leaderboard', label: 'LeaderBoard', id: 'leaderboard' },
-                  { href: '#', label: 'Rhinofi Tokenomics', id: 'tokenomics' },
-                  { href: '#', label: 'Holder Benefits', id: 'benefits' },
-                  { href: '/pool', label: 'Rhinofi Brand Assets', id: 'assets' },
-                  { href: '/whitepaper', label: 'WhitePaper', id: 'whitepaper' },
-                ].map(item => (
-                  <Link
-                    key={item.id}
-                    href={item.href}
-                    onClick={() => setActive(item.id)}
-                    className={`flex items-center gap-2 px-3 ${
-                      activeMenu === item.id ? 'text-[#D458C0] bg-[#8F6CFA35] rounded-[5px] py-[10px]' : ''
-                    }`}
-                  >
-                    <Image src="/icons/arrow-pointed.svg" alt="Arrow" width={16} height={16} className="object-contain" />
-                    {item.label}
-                  </Link>
-                ))}
+  { href: '/', label: 'Home', id: 'home' },
+  { href: '#', label: 'Buy (RHINO) Token', id: 'buy' },
+  { href: '/pool', label: 'Liquidity Pool', id: 'pool' },
+  { href: '/leaderboard', label: 'LeaderBoard', id: 'leaderboard' },
+  { href: '#', label: 'Rhinofi Tokenomics', id: 'tokenomics' },
+  { href: '#', label: 'Holder Benefits', id: 'benefits' },
+  { href: '#', label: 'Rhinofi Brand Assets', id: 'assets' },
+  { href: '/whitepaper', label: 'WhitePaper', id: 'whitepaper' },
+].map(item => (
+  <Link
+    key={item.id}
+    href={item.href}
+    onClick={() => setActive(item.id)}
+    className={`flex items-center gap-2 px-3 transition-all duration-200 ${
+      activeMenu === item.id
+        ? 'text-[#D458C0] bg-[#8F6CFA35] rounded-[5px] py-[10px]'
+        : 'hover:text-[#D458C0] hover:bg-[#8F6CFA35] hover:rounded-[5px] hover:py-[10px]'
+    }`}
+  >
+    <Image src="/icons/arrow-pointed.svg" alt="Arrow" width={16} height={16} className="object-contain" />
+    {item.label}
+  </Link>
+))}
+
 
                 {/* Divider + Social Icons */}
                 <div>
-                  <Image src="/divider.png" alt="Divider" width={300} height={30} className="object-contain mx-auto" />
+                  <Image src="/divider.png" alt="Divider" width={300} height={30} className="object-contain mx-auto sm:pt-[130px] pt-[65px] sm:pb-[45px] pb-[40px]" />
                   <div className="flex justify-start gap-4 mt-4 mb-4">
                     <a
-                      href="https://twitter.com/yourprofile"
+                      href="https://t.me/RhinoFiWin"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-[50px] h-[50px] flex items-center justify-center rounded-full bg-gradient-to-br from-[#BD58C0] to-[#2CC8D8]"
@@ -168,7 +176,7 @@ export default function Header() {
                       <img src='/icons/X-icon.svg' alt='X-icon' className=''/>
                     </a>
                     <a
-                      href="https://instagram.com/yourprofile"
+                      href="https://t.me/RhinoFiWin"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-[50px] h-[50px] flex items-center justify-center rounded-full bg-gradient-to-br from-[#BD58C0] to-[#2CC8D8]"

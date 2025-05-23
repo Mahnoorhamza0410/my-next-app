@@ -18,8 +18,8 @@ const page = () => {
         </h1>
       </div> */}
        <div
-        className="w-full bg-cover bg-center bg-no-repeat  min-h-[700px] flex items-center justify-center px-4"
-        style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+        className="w-full bg-cover sm:bg-center bg-left bg-onside bg-no-repeat  min-h-[700px] flex items-center justify-center px-4"
+        style={{ backgroundImage: "url('/hero-bgcrop.png')" ,backgroundColor: "#010001B2",backgroundBlendMode: "overlay" }}
       >
          {/* Insert Particles JUST inside Banner */}
          <div className="absolute inset-0 z-0 pointer-events-none">
@@ -31,23 +31,32 @@ const page = () => {
             color="#ffffff"
           />
         </div>
+      
         <DynamicLayout
-          title="SOLIDITY WHITEPAPER"
+           title="RHINO WHITEPAPER"
+          subtitle={
+            <>
+           
+            </>
+          }
+          // ✅ Added class support for layout adjustments
+          titleClassName="hello-test"
+          subtitleClassName=""
         />
       </div>
 
       {/* Content */}
       <div className="w-full max-w-[1074px] s pt-[84px] pb-[100px] px-4 mt-[-350px]">
-        <h5 className="text-white font-bold text-[24px]">Abstract</h5>
-        <p className="text-white font-light text-[18px] tracking-wider">
+        <h5 className="text-white font-bold sm:text-[24px] text-[18px] font-['Open_Sans']">Abstract</h5>
+        <p className="text-white font-normal sm:text-[24px] text-[18px] font-['Open_Sans'] tracking-wider">
           Solidity is a groundbreaking LP reflection token on the PulseChain ecosystem.
           Designed to empower investors with a fair, transparent, and hyper-deflationary platform, Solidity integrates cutting-edge features such as dynamic sell tax, LP reflection rewards, and token-burning mechanisms to enhance value over time.
           Our mission is to create a sustainable, wealth-building community that provides education, tools, and incentives to support long-term holders.
         </p>
 
         <div className="mt-8">
-          <h5 className="text-white font-bold text-[24px]">Introduction</h5>
-          <p className="text-white font-light text-[18px] tracking-wider">
+          <h5 className="text-white font-bold sm:text-[24px] text-[18px]">Introduction</h5>
+          <p className="text-white font-normal sm:text-[24px] text-[18px] font-['Open_Sans'] tracking-wider">
             Cryptocurrency is revolutionizing the way we perceive and interact with financial systems. Despite this, many projects lack the transparency and long-term strategies needed to foster trust and sustainable growth.
             Solidity addresses these challenges by creating a fair launch, hyper-deflationary token that aligns with the principles of decentralization, fairness, and community empowerment.
             Solidity is the first LP reflection token on PulseChain, offering rewards in SolidX and Gelato while simultaneously burning tokens to increase scarcity. Through advanced features and partnerships, Solidity provides tools, education, and incentives to ensure that holders achieve wealth and financial freedom.
@@ -55,13 +64,13 @@ const page = () => {
         </div>
 
         <div className="mt-8">
-          <h5 className="text-white font-bold text-[24px]">Key Features</h5>
+          <h5 className="text-white font-bold sm:text-[24px] text-[18px] font-['Open_Sans']">Key Features</h5>
 
-          <div className="text-white font-light text-[18px] tracking-wider space-y-6 mt-4">
+          <div className="text-white font-normal sm:text-[24px] text-[18px] font-['Open_Sans'] tracking-wider  ">
             {/* 1. Fair Launch */}
             <div>
               <p><strong>1. Fair Launch</strong></p>
-              <ul className="list-disc list-inside ml-5 space-y-1">
+              <ul className="list-disc list-inside ml-5 ">
                 <li>Transparency: Solidity launched without private presales or insider advantages, ensuring a level playing field for all participants.</li>
                 <li>Community-Driven: Early adopters are treated equally, fostering trust and long-term engagement.</li>
               </ul>
@@ -112,13 +121,13 @@ const page = () => {
           </div>
         </div>
         <div className="mt-8">
-          <h5 className="text-white font-bold text-[24px]">Tokenomics</h5>
+          <h5 className="text-white font-bold sm:text-[24px] text-[18px] font-['Open_Sans']">Tokenomics</h5>
 
-          <div className="text-white font-light text-[18px] tracking-wider space-y-6 mt-4">
+          <div className="text-white font-normal sm:text-[24px] text-[18px] font-['Open_Sans'] tracking-wider  mt-">
             {/* 1. Supply Allocation */}
             <div>
               <p><strong>1. Supply Allocation</strong></p>
-              <ul className="list-disc list-inside ml-5 space-y-1">
+              <ul className="list-disc list-inside ml-5 ">
                 <li>Total Supply: 1,000,000,000 Solidity tokens (SOLID).</li>
                 <li>Ecosystem Development: 40%</li>
                 <li>Liquidity Pool: 30%</li>
@@ -146,25 +155,28 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 text-white font-light text-[18px] tracking-wider space-y-6">
+        <div className="mt-8 text-white font-light sm:text-[24px] text-[18px] tracking-wider space-y-6">
 
           {/* Conclusion */}
-          <div>
-            <h5 className="font-bold text-[24px]">Conclusion</h5>
-            <p>
+          <div className="pt-[75px]">
+            <h5 className="font-bold sm:text-[24px] text-[18px] font-['Open_Sans']">Conclusion</h5>
+            <p className="font-normal sm:text-[24px] text-[18px] font-['Open_Sans']">
               Solidity is more than a token; it’s a community-driven ecosystem built on transparency, innovation, and sustainability.
               By rewarding long-term holders, fostering education, and leveraging hyper-deflationary mechanics, Solidity is poised to redefine wealth creation in the cryptocurrency space.
               Join us as we build the future of decentralized finance on PulseChain.
+            </p>
+            <p className="font-normal sm:text-[24px] text-[18px] font-['Open_Sans']">
+              Disclaimer
+              <br />
+              Cryptocurrency investments involve risks. Solidity does not guarantee financial returns or success.
+              Participants are advised to conduct thorough research and consult financial advisors before investing.
             </p>
           </div>
 
           {/* Disclaimer */}
           <div>
-            <h5 className="font-bold text-[24px]">Disclaimer</h5>
-            <p>
-              Cryptocurrency investments involve risks. Solidity does not guarantee financial returns or success.
-              Participants are advised to conduct thorough research and consult financial advisors before investing.
-            </p>
+          
+            
           </div>
         </div>
       </div>

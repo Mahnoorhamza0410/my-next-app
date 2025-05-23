@@ -30,23 +30,25 @@ export default function Page() {
       <div className="relative w-full">
         {/* Main Banner Content */}
         <BannerLayout>
-          <div className="pb-[115px] sm:pb-[200px] sm:mt-[150px]">
+          
+          {/* pb-[115px] sm:pb-[200px] previous ones*/}
+          <div className="pb-[90px] sm:pt-[0px] pt-[90px] sm:mt-[150px] space-below-btn">
             <h1
-              className="text-transparent bg-clip-text font-bold text-[40px] sm:text-[60px] capitalize leading-[130%] ml-0 sm:ml-[10px]"
+              className="text-transparent bg-clip-text font-extrabold text-[40px] sm:text-[60px] capitalize leading-[130%] ml-0 sm:ml-[10px]"
               style={{
                 backgroundImage: 'linear-gradient(to bottom, white, #ADADAD)',
               }}
             >
               THE FIRST EVER
             </h1>
-            <p className="text-white font-light text-[20px] sm:text-[38px] leading-[118%]">
+            <p className="text-white font-light text-[20px] sm:text-[42px] leading-[118%] space-hyper">
               Hyper Deflationary, Dynamically Taxed,<br /> Multi-Rewards Machine
             </p>
 
             {/* Copy Address */}
-            <div className='flex items-center justify-center sm:mt-[20px] mt-[28px] gap-2'>
+            <div className='flex items-center justify-center sm:mt-[20px] mt-[28px] gap-2 space-rhinotoken'>
               <p
-                className='text-[22px] font-light leading-[100%] cursor-pointer'
+                className='text-[22px] font-medium leading-[100%] cursor-pointer'
                 onClick={copyAddress}
                 title="Click to copy address"
               >
@@ -68,7 +70,7 @@ export default function Page() {
             <div className="flex justify-center w-full sm:mt-[20px] mt-[28px]">
               <a
                 href="#"
-                className="inline-flex items-center uppercase sm:h-[auto] h-[50px] sm:w-[auto] w-[340px] justify-center mb-[20px] px-[32px] sm:px-[47px] py-[9px] sm:py-[7px] font-medium text-[18px] sm:text-[20px] rounded-[500px] bg-gradient-to-r from-[#BB57BF] via-[#2E4B94] to-[#2CC8D8] text-white leading-[48px]"
+                className="inline-flex items-center uppercase sm:h-[70px] h-[70px] sm:w-[366px] w-[360px] justify-center mb-[20px] px-[32px] sm:px-[47px] py-[9px] sm:py-[7px] font-bold text-[22px] sm:text-[22px] rounded-[500px] bg-gradient-to-r from-[#BB57BF] via-[#2E4B94] to-[#2CC8D8] text-white leading-[48px]"
               >
                 Join The Stampede
                 <img

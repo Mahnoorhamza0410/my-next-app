@@ -244,7 +244,19 @@ h5{
 
 @media only screen and (max-width: 2560px) and (min-width: 2151px)  {
   .big-sc{
-    height: 83vh;
+    /* previuos height */
+    /* height: 83vh; */
+    height: 100vh;
+  }
+  .space-hyper{
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .space-rhinotoken{
+    padding-bottom: 30px;
+  }
+  .space-below-btn{
+    padding-bottom: 70px;
   }
   
 }
@@ -388,4 +400,146 @@ background:linear-gradient(20deg, #4f6eff1f 40%, #8f6cfa30 100%);
 
 .bg-for-cell {
 background:linear-gradient(20deg, #4f6eff1f 40%, #8f6cfa30 100%);
+}
+@media only screen and (max-width: 1050px) and (min-width: 1015px){
+  .pad-1024just{
+    padding-left: 30px;
+    padding-right: 30px;
+    width: auto;
+  }
+}
+
+
+@media only screen and (max-width: 600px) and (min-width: 300px){
+.bg-custom-poistion-sm{
+      background-position: 68% 25%;
+}
+}
+
+@media only screen and (max-width: 900px) and (min-width: 600px){
+.shaded-width-786poolandlboard{
+width: 700px;
+}
+.copy-786sc{
+      margin-right: -16px;
+    height: 18px;
+    width: 18px;
+    margin-top: -4px;
+}
+.bg-onside{
+  background-position: 2%;
+}
+.bg-onside-lb{
+  background-position: 2%;
+}
+}
+@media only screen and (max-width: 550px) and (min-width: 300px){
+.lb-sm{
+ width: 359px;
+        height: 88px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        flex-wrap: wrap;
+        padding: 8px 4px;
+        font-weight: 400;
+}
+}
+
+/* for rhino inner pages just sm screens */
+@media only screen and (max-width: 550px) and (min-width: 300px){
+.hello-test{
+padding-top: 60px;
+padding-bottom: 105px;
+    margin-bottom: 135px;
+}
+.bg-onside{
+  background-position: 2%;
+  min-height: 575px;
+
+}
+.bg-onside-lb{
+  background-position: 2%;
+}
+.hello-test-lb{
+padding-top: 85px;
+padding-bottom: 25px;
+    
+}
+.lb-shadedarea-mb{
+  margin-top: 80px;
+}
+.padd-top90img{
+  padding-top: 90px;
+}
+.copy-mb{
+        width: 18px;
+        height: 18px;
+        margin-top: -5px;
+        margin-right: -10px;
+
+}
+
+/* for the pools page */
+.bg-onside-pools{
+  background-position: 2%;
+}
+.hello-test-pools{
+padding-top: 85px;
+padding-bottom: 25px;
+    
+}
+.lb-shadedarea-pools{
+  margin-top: 80px;
+}
+}
+
+
+
+
+/* for rhino inner pages just lg screens */
+@media only screen and (max-width: 1600px) and (min-width: 1150px){
+.hello-test-lb-lg{
+padding-bottom: 30px;
+}
+.lb-shadedarea-lg{
+  margin-top: 25px;
+}
+
+.hello-test{
+padding-top: 120px;
+padding-bottom: 110px;
+}
+.hello-test-pools{
+        padding-top: 140px;
+        padding-bottom: 40px;
+    
+}
+
+/* for the cards holder benifits text */
+.hbmargintopminus{
+  margin-top: -15px;
+} 
+
+}
+
+
+/* for home tabn padding */
+.padd-tab{
+  padding: 0 40px;
+}
+@media only screen and (max-width: 850px) and (min-width: 700px){
+.hide786{
+display: none;
+}
+}
+@media only screen and (max-width: 800px) and (min-width: 750px){
+.ptop{
+  padding-top: 90px;
+}
+.pbottom{
+  padding-bottom: 90px;
+}
+.margin-sides{margin: 0px 10px;}
 }

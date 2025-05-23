@@ -4,7 +4,8 @@ import { Particles } from '@/components/magicui/particles'; // adjust the path i
 
 export default function BannerLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="relative w-full h-[70vh] cc-h sm:h-[112vh] big-sc overflow-hidden">
+    // h-[70vh] before and now 85
+    <div className="relative w-full h-[85vh] cc-h sm:h-[112vh] big-sc overflow-hidden">
       {/* Background Image */}
       <img
         src="/hero-bgcrop.png "

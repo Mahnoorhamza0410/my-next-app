@@ -1,26 +1,34 @@
 'user client';
 import React from 'react';
+
 interface DynamicLayoutProps {
   title: string;
   subtitle?: React.ReactNode; // :white_check_mark: Add subtitle prop
   children?: React.ReactNode;
+  titleClassName?: string; // :white_check_mark: Add optional class for title
+  subtitleClassName?: string; // :white_check_mark: Add optional class for subtitle
 }
-const DynamicLayout: React.FC<DynamicLayoutProps> = ({ title, subtitle, children }) => {
+
+const DynamicLayout: React.FC<DynamicLayoutProps> = ({ title, subtitle, children, titleClassName = '', subtitleClassName = '' }) => {
   return (
     // <section className="flex flex-col items-center justify-center px-4 pt-[100px] pb-6"> padding was 100px now i change in 0px
-     <section className="flex flex-col items-center justify-center px-4 pt-[0px] pb-6"> 
+    <section className="flex flex-col items-center justify-center px-4 pt-[0px] pb-6"> 
       {/* Heading */}
-      <h2      className="text-transparent text-center font=[Kumbh-Sans] bg-clip-text font-bold text-[36px] sm:text-[60px] capitalize leading-[130%] ml-0 sm:ml-[10px]"
-              style={{
-                backgroundImage: 'linear-gradient(to bottom, white, #ADADAD)',
-                // textShadow: '0px 5px 12px rgba(0, 0, 0, 0.20)'
-              }}
-            >
-      {title}
+      <h2
+        className={`text-transparent text-center font=[Kumbh-Sans] bg-clip-text font-extrabold text-[40px] sm:text-[60px] capitalize leading-[130%] ml-0 sm:ml-[10px]  ${titleClassName}`}
+        style={{
+          backgroundImage: 'linear-gradient(to bottom, white, #ADADAD)',
+          // textShadow: '0px 5px 12px rgba(0, 0, 0, 0.20)'
+        }}
+      >
+        {title}
       </h2>
       {/* Paragraph with subtitle if exists */}
       {subtitle && (
-        <p className="mt-4 rounded-md text-white bg-[#7A61FC]/20 text-center max-w-[893px] sm:h-[62px] h-[auto] py-[14.5px] px-[40px] sm:px-[120px] text-[18px] sm:text-[24px] font-normal">
+        // <p className="mt-4 rounded-md text-white bg-[#7A61FC]/20 text-center max-w-[893px] sm:h-[62px] h-[auto] py-[14.5px] px-[40px] sm:px-[120px] text-[18px] sm:text-[24px] font-normal">
+        //   {subtitle}
+        // </p>
+        <p className={`flex items-center justify-center mt-4 rounded-md text-white bg-[#7A61FC]/20 text-center sm:h-[62px] h-[auto] text-[24px] sm:text-[24px] font-normal ${subtitleClassName}`}>
           {subtitle}
         </p>
       )}
@@ -29,4 +37,5 @@ const DynamicLayout: React.FC<DynamicLayoutProps> = ({ title, subtitle, children
     </section>
   );
 };
+
 export default DynamicLayout;
